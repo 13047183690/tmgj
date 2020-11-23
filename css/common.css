@@ -87,10 +87,7 @@ html, body {
   left: 160px;
 }
 #site-nav .sn-right .sbox3 {
-  right: 9px;
   z-index: 10;
-}
-#site-nav .sn-right .sbox3 div {
   border-bottom: 1px dotted #646161;
   padding: 0 7px;
   line-height: 24px;

@@ -26,6 +26,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "swiper": "^6.3.5"
   }
 }
