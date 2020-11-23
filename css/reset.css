@@ -1,0 +1,58 @@
+@charset "UTF-8";
+html, body, input, a, i, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix {
+  zoom: 1;
+  /* zoom:1;兼容IE */
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  /* 万能清除浮动 */
+}
+
+body, html {
+  font: 14px "Microsoft YaHei", "Arial";
+  /* 文字14px 微软雅黑  */
+}
+
+h1, h2, h3, h4, h5, b, strong {
+  font-weight: normal;
+  /* 字体装饰取消 */
+  font-size: 100%;
+  /* 字体大小跟随父级 */
+}
+
+em, i {
+  font-style: normal;
+  /* 字体装饰取消清除倾斜 */
+}
+
+ul, ol {
+  list-style: none;
+  /* 列表式 清除序列*/
+}
+
+a {
+  text-decoration: none;
+  /* 文本修饰没有清除A标签下划线 */
+}
+
+input {
+  outline: none;
+  /* 轮廓没有 */
+}
+
+img {
+  vertical-align: middle;
+  /* 垂直对齐中间 */
+}
+
+/*# sourceMappingURL=reset.css.map */
