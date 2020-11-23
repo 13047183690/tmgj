@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #header {
   height: 120px;
   padding: 0 190px;
@@ -119,3 +120,30 @@
     .banner .b-left .li-box a:hover {
       color: red;
       text-decoration: underline; }
+
+.banner #banner-box {
+  width: 750px;
+  height: 420px;
+  float: left; }
+  .banner #banner-box img {
+    width: 750px; }
+  .banner #banner-box .swiper-container {
+    --swiper-theme-color: #fff;
+    /* 设置Swiper风格 */
+    --swiper-navigation-color: #fff;
+    /* 单独设置按钮颜色 */
+    --swiper-navigation-size: 26px;
+    /* 设置按钮大小 */ }
+    .banner #banner-box .swiper-container .hide {
+      opacity: 0; }
+    .banner #banner-box .swiper-container .swiper-button-next, .banner #banner-box .swiper-container .swiper-button-prev {
+      transition: opacity 0.5s; }
+  .banner #banner-box #next1, .banner #banner-box #prev1 {
+    width: 34px;
+    height: 68px;
+    background: #000;
+    opacity: 0.3; }
+  .banner #banner-box #next1 {
+    right: 0; }
+  .banner #banner-box #prev1 {
+    left: 0; }
