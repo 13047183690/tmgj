@@ -48,6 +48,9 @@
     //获取value
     var nVal = $("#register .zcName").val();
     var pVal = $("#register .zcUpwd").val();
-    $.ajax({});
+    $.ajax({
+      url: "",
+      type: "post"
+    });
   });
 })();
