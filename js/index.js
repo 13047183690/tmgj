@@ -47,7 +47,10 @@ $(function(){
         success:function(json){
             var colStr = "";
             //遍历得到的json数据遍历
-            $.each(json,function(index,item){
+            $.each(json[0],function(index,item){
+                $("#banner-box .swiper-wrapper").html() = 111;
+            });
+            $.each(json[1],function(index,item){
                 colStr += `
                     <li>
                         <img src="${item.imgurl}" alt="">

@@ -48,7 +48,12 @@ $(function () {
     success: function success(json) {
       var colStr = ""; //遍历得到的json数据遍历
 
-      $.each(json, function (index, item) {
+      $.each(json[0], function (index, item) {
+        $("#banner-box .swiper-wrapper").html()+= `
+             <div class="swiper-slide"><img src="${item.imgurl}" alt=""></div>
+         `
+      });
+      $.each(json[1], function (index, item) {
         colStr += "\n                    <li>\n                        <img src=\"".concat(item.imgurl, "\" alt=\"\">\n                        <div class=\"dis\">\n                            <span>\n                                ").concat(parseInt(item.zk), "<i>.").concat(item.zk * 10 - parseInt(item.zk) * 10, "</i>\n                                <p>\u6298</p>\n                            </span>\n                            <em></em>\n                        </div>\n                        <div class=\"col_details\">\n                            <i>\u6D77\u5916\u54C1\u724C</i>\n                            <p>").concat(item.title, "</p>\n                            <span>").concat(item.xq, "</span>\n                            <div>\n                                <strong><em>\uFFE5</em>").concat(item.rp, "</strong>\n                                <span>\uFFE5").concat(item.op, "</span><br>\n                                <i>\u5DF2\u65363").concat(item.soldout, "\u4EF6</i>\n                            </div>\n                            <a href=\"./html/xq.html\">\u9A6C\u4E0A\u62A2</a>\n                        </div>\n                    </li>\n                ");
       });
       $(".column ul").html(colStr);
