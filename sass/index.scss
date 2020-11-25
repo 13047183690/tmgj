@@ -158,14 +158,15 @@
             width: 750px;
         }
         .swiper-container{
-            --swiper-theme-color: #fff;/* 设置Swiper风格 */
-            --swiper-navigation-color: #fff;/* 单独设置按钮颜色 */
-            --swiper-navigation-size: 26px;/* 设置按钮大小 */
             .hide{
                 opacity:0;
             }
             .swiper-button-next,.swiper-button-prev{
                 transition:opacity 0.5s;
+            }
+            .swiper-pagination{
+                color: #fff;
+                float: right;
             }
         }
         #next1,#prev1{
@@ -173,12 +174,161 @@
             height: 68px;
             background: #000;
             opacity: 0.3;
+            color: #fff;
+            font-size: 26px;
         }
         #next1{
             right: 0;
         }
         #prev1{
             left: 0;
+        }
+    }
+    .b-right{
+        float: right;
+        width: 240px;
+        height: 392px;
+        padding-top: 28px;
+        font-size: 18px;
+        line-height: 30px;
+        color: #7a45e5;
+        text-align: center;
+        background: #fff;
+        h2,h3{
+            font-weight: bold;
+        }
+        span,p{
+            font-size: 14px;
+            line-height: 40px;
+            color: #333;
+        }
+        p{
+            color: #a5a5a5;
+        }
+    }
+}
+.column{
+    height: 590px;
+    text-align: center;
+    >h2{
+        font-size: 23px;
+        display: inline;
+        line-height: 115px;
+        margin-right: 20px;
+    }
+    >span{
+        font-size: 18px;
+        line-height: 115px;
+        margin-right: 10px;
+        color: #494949;
+    }
+    >div{
+        width: 140px;
+        height: 34px;
+        border: 1px solid #7a45e5;
+        border-radius: 2px;
+        line-height: 34px;
+        color: #7a45e5;
+        margin: auto;
+        margin-bottom: 24px;
+        >i{
+            font-size: 14px;
+            margin-left: 8px;
+        }
+    }
+    ul li{
+        width: 237px;
+        height: 410px;
+        background: white;
+        border-left: 1px solid #f2f2f2;
+        float: left;
+        font-size: 12px;
+        color: #999;
+        position: relative;
+        img{
+            width: 237px;
+            margin-bottom: 23px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    }
+    .col_details{
+        padding: 0 10px;
+        text-align: left;
+        p{ 
+            font-size: 16px;
+            font-weight: bolder;
+            line-height: 42px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        >span{
+            display: block;
+            height: 34px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        >div{
+            float: left;
+            span{
+                text-decoration: line-through;
+            }
+        }
+        strong{
+            font-size: 17px;
+            color: #dd2727;
+            em{
+                font-size: 10px;
+            }
+        }
+        a{
+            display:block;
+            float: right;
+            width: 84px;
+            height: 40px;
+            background: #ffdadd;
+            text-align: center;
+            font-size: 18px;
+            line-height: 40px;
+            border-radius: 4px;
+            color: #ff4455;
+        }
+    }
+    .dis{
+        width: 64px;
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        span{
+            display: block;
+            margin-left: 12px;
+            width: 46px;
+            height: 40px;
+            background: #ff4150;
+            font-size: 24px;
+            i{
+                font-size: 14px;
+            }
+        }
+        p{
+            font-size: 16px;
+            color: #ffdfff;
+            position: relative;
+            top: -5px;
+            z-index: 1;
+        }
+        em{
+            display: block;
+            border-top:20px solid #ff4150;
+            border-left: 32px solid transparent;
+            border-right: 32px solid transparent;
+            position: relative;
+            left: 3px;
         }
     }
 }

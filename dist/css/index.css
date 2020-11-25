@@ -1,4 +1,3 @@
-@charset "UTF-8";
 #header {
   height: 120px;
   padding: 0 190px;
@@ -127,23 +126,145 @@
   float: left; }
   .banner #banner-box img {
     width: 750px; }
-  .banner #banner-box .swiper-container {
-    --swiper-theme-color: #fff;
-    /* 设置Swiper风格 */
-    --swiper-navigation-color: #fff;
-    /* 单独设置按钮颜色 */
-    --swiper-navigation-size: 26px;
-    /* 设置按钮大小 */ }
-    .banner #banner-box .swiper-container .hide {
-      opacity: 0; }
-    .banner #banner-box .swiper-container .swiper-button-next, .banner #banner-box .swiper-container .swiper-button-prev {
-      transition: opacity 0.5s; }
+  .banner #banner-box .swiper-container .hide {
+    opacity: 0; }
+  .banner #banner-box .swiper-container .swiper-button-next, .banner #banner-box .swiper-container .swiper-button-prev {
+    transition: opacity 0.5s; }
+  .banner #banner-box .swiper-container .swiper-pagination {
+    color: #fff;
+    float: right; }
   .banner #banner-box #next1, .banner #banner-box #prev1 {
     width: 34px;
     height: 68px;
     background: #000;
-    opacity: 0.3; }
+    opacity: 0.3;
+    color: #fff;
+    font-size: 26px; }
   .banner #banner-box #next1 {
     right: 0; }
   .banner #banner-box #prev1 {
     left: 0; }
+
+.banner .b-right {
+  float: right;
+  width: 240px;
+  height: 392px;
+  padding-top: 28px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7a45e5;
+  text-align: center;
+  background: #fff; }
+  .banner .b-right h2, .banner .b-right h3 {
+    font-weight: bold; }
+  .banner .b-right span, .banner .b-right p {
+    font-size: 14px;
+    line-height: 40px;
+    color: #333; }
+  .banner .b-right p {
+    color: #a5a5a5; }
+
+.column {
+  height: 590px;
+  text-align: center; }
+  .column > h2 {
+    font-size: 23px;
+    display: inline;
+    line-height: 115px;
+    margin-right: 20px; }
+  .column > span {
+    font-size: 18px;
+    line-height: 115px;
+    margin-right: 10px;
+    color: #494949; }
+  .column > div {
+    width: 140px;
+    height: 34px;
+    border: 1px solid #7a45e5;
+    border-radius: 2px;
+    line-height: 34px;
+    color: #7a45e5;
+    margin: auto;
+    margin-bottom: 24px; }
+    .column > div > i {
+      font-size: 14px;
+      margin-left: 8px; }
+  .column ul li {
+    width: 237px;
+    height: 410px;
+    background: white;
+    border-left: 1px solid #f2f2f2;
+    float: left;
+    font-size: 12px;
+    color: #999;
+    position: relative; }
+    .column ul li img {
+      width: 237px;
+      margin-bottom: 23px; }
+    .column ul li img:hover {
+      cursor: pointer; }
+  .column .col_details {
+    padding: 0 10px;
+    text-align: left; }
+    .column .col_details p {
+      font-size: 16px;
+      font-weight: bolder;
+      line-height: 42px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .column .col_details > span {
+      display: block;
+      height: 34px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .column .col_details > div {
+      float: left; }
+      .column .col_details > div span {
+        text-decoration: line-through; }
+    .column .col_details strong {
+      font-size: 17px;
+      color: #dd2727; }
+      .column .col_details strong em {
+        font-size: 10px; }
+    .column .col_details a {
+      display: block;
+      float: right;
+      width: 84px;
+      height: 40px;
+      background: #ffdadd;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+      border-radius: 4px;
+      color: #ff4455; }
+  .column .dis {
+    width: 64px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white; }
+    .column .dis span {
+      display: block;
+      margin-left: 12px;
+      width: 46px;
+      height: 40px;
+      background: #ff4150;
+      font-size: 24px; }
+      .column .dis span i {
+        font-size: 14px; }
+    .column .dis p {
+      font-size: 16px;
+      color: #ffdfff;
+      position: relative;
+      top: -5px;
+      z-index: 1; }
+    .column .dis em {
+      display: block;
+      border-top: 20px solid #ff4150;
+      border-left: 32px solid transparent;
+      border-right: 32px solid transparent;
+      position: relative;
+      left: 3px; }

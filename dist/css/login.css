@@ -1,0 +1,117 @@
+#header {
+  height: 88px;
+  overflow: hidden; }
+  #header a {
+    display: block;
+    width: 116px;
+    height: 40px;
+    background: url(../img/logo2.png);
+    background-size: cover;
+    text-indent: -999px;
+    margin: 22px 20px 0 78px;
+    float: left; }
+  #header h1 {
+    letter-spacing: 12px;
+    margin-top: 33px;
+    color: #5e5e5e; }
+
+#banner {
+  height: 604px;
+  background: url(../img/banner.jpg) 100%;
+  margin-bottom: 72px; }
+  #banner form {
+    width: 300px;
+    height: 404px;
+    background: #fff;
+    float: right;
+    margin: 90px 70px 0 0;
+    padding: 30px 25px 0 25px; }
+  #banner #loginBox > input {
+    border: none;
+    background: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 0;
+    color: #3c3c3c; }
+  #banner #loginBox .bt {
+    border-bottom: 2px solid #000; }
+  #banner input:nth-child(1) {
+    margin-right: 10px; }
+  #banner p {
+    width: 298px;
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid #f1eeee; }
+    #banner p i {
+      float: left;
+      width: 40px;
+      height: 40px;
+      background: #ccc;
+      line-height: 40px;
+      color: #fff;
+      text-align: center; }
+    #banner p input {
+      width: 248px;
+      height: 40px;
+      padding-left: 10px;
+      font-size: 14px;
+      color: #757575;
+      border: 0; }
+  #banner .sub {
+    width: 300px;
+    height: 42px;
+    margin-top: 20px;
+    background: #ff0036;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff; }
+  #banner a {
+    float: right;
+    font-size: 12px;
+    line-height: 50px;
+    color: #6c6c6c;
+    margin-left: 11px; }
+  #banner .dx {
+    display: none;
+    position: relative; }
+    #banner .dx p a {
+      position: absolute;
+      line-height: 40px;
+      top: 64px;
+      right: 5px; }
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px; }
+  .copyright a {
+    color: #000; }
+
+#shade {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.3;
+  z-index: 10;
+  display: none; }
+
+#register {
+  width: 325px;
+  height: 300px;
+  padding: 50px 0 0 25px;
+  background: #fff;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  display: none; }
+
+#register .closeZc {
+  position: absolute;
+  right: 10px;
+  top: 0; }

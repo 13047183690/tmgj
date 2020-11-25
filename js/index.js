@@ -37,3 +37,42 @@ $("#banner-box").mouseout(function(){
     next1.hide();
     prev1.hide();
 });
+
+//请求json数据渲染在主页面
+$(function(){
+    $.ajax({
+        url:"./php/sp.json",
+        type:"get",
+        dataType:"json",
+        success:function(json){
+            var colStr = "";
+            //遍历得到的json数据遍历
+            $.each(json,function(index,item){
+                colStr += `
+                    <li>
+                        <img src="${item.imgurl}" alt="">
+                        <div class="dis">
+                            <span>
+                                ${parseInt(item.zk)}<i>.${(item.zk)*10-(parseInt(item.zk)*10)}</i>
+                                <p>折</p>
+                            </span>
+                            <em></em>
+                        </div>
+                        <div class="col_details">
+                            <i>海外品牌</i>
+                            <p>${item.title}</p>
+                            <span>${item.xq}</span>
+                            <div>
+                                <strong><em>￥</em>${item.rp}</strong>
+                                <span>￥${item.op}</span><br>
+                                <i>已收3${item.soldout}件</i>
+                            </div>
+                            <a href="./html/xq.html">马上抢</a>
+                        </div>
+                    </li>
+                `
+            });
+            $(".column ul").html(colStr);
+        }
+    });
+});
