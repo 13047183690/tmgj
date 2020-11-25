@@ -1,43 +1,53 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+(function () {
+  //切换账号登录和短信登录
+  $("#loginBox>input").on("click", function () {
+    $(this).addClass("bt").siblings().removeClass("bt");
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var obj = {
-  $zcBut: $("#zcBut"),
-  //注册按钮
-  $shade: $("#shade") //遮罩层
-
-};
-
-var Register = /*#__PURE__*/function () {
-  function Register(obj) {
-    _classCallCheck(this, Register);
-
-    this.$zcBut = obj.$zcBut;
-    this.$shade = obj.$shade;
-  }
-
-  _createClass(Register, [{
-    key: "init",
-    value: function init() {
-      this.zcButClick();
+    if ($(this).index() === 1) {
+      $(".zh").hide();
+      $(".dx").show();
+    } else {
+      $(".zh").show();
+      $(".dx").hide();
     }
-  }, {
-    key: "zcButClick",
-    value: function zcButClick() {
-      var _this = this;
+  }); //显示注册框
 
-      this.$zcBut.on("click", function () {
-        alert(1);
+  $("#zcBut").on("click", function () {
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+    $("#shade").show().css({
+      "width": w,
+      "height": h
+    }); //显示遮罩层设置宽高
 
-        _this.$shade.show();
-      });
-    }
-  }]);
+    $("#register").show().css({
+      left: function left() {
+        //调整left
+        return (w - $(this).width()) / 2;
+      },
+      top: function top() {
+        //调整top
+        return (h - $(this).height()) / 2;
+      }
+    });
+    document.body.style.overflow = "hidden"; //禁止页面滚动
+  }); //关闭注册框
 
-  return Register;
-}();
+  $(".closeZc").on("click", function () {
+    $("#shade").hide();
+    $("#register").hide();
+    document.body.style.overflow = "auto"; //解除禁止页面滚动
+  });
+})();
+
+(function () {
+  //账号登录请求
+  $("#register .sub").on("click", function () {
+    //获取value
+    var nVal = $("#register .zcName").val();
+    var pVal = $("#register .zcUpwd").val();
+    $.ajax({});
+  });
+})();
