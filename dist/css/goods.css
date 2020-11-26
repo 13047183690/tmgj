@@ -1,0 +1,110 @@
+.wrap {
+  width: 1000px;
+  margin: 0 auto; }
+
+.header {
+  position: relative;
+  background-color: #eee;
+  height: 80px;
+  text-align: center; }
+  .header img {
+    float: left;
+    position: absolute;
+    height: 60px;
+    left: 10px;
+    top: 10px; }
+  .header h1 {
+    font-size: 40px;
+    display: inline; }
+
+.title {
+  line-height: 40px;
+  background-color: #ccc;
+  overflow: hidden;
+  margin-top: 30px; }
+  .title .a1 {
+    margin-left: 100px; }
+  .title .a2 {
+    margin-left: 470px; }
+  .title .a3 {
+    margin-left: 100px; }
+  .title .a4 {
+    margin-left: 100px; }
+  .title span {
+    font-size: 14px;
+    color: #333; }
+
+.list li {
+  margin: 10px 0;
+  overflow: hidden;
+  line-height: 100px;
+  background-color: whitesmoke;
+  border: 1px solid #ccc; }
+  .list li img {
+    width: 100px;
+    height: 100px;
+    float: left; }
+  .list li h3 {
+    float: left;
+    margin-left: 10px;
+    width: 340px; }
+  .list li p {
+    float: left;
+    margin-left: 120px;
+    width: 100px;
+    text-align: center; }
+  .list li span {
+    float: left;
+    margin-left: 30px;
+    width: 100px;
+    text-align: center; }
+    .list li span i {
+      font-size: 20px;
+      display: inline-block;
+      line-height: 20px;
+      width: 20px;
+      height: 20px;
+      background-color: #ccc;
+      cursor: pointer; }
+    .list li span strong {
+      margin: 0 10px; }
+  .list li em {
+    float: left;
+    margin-left: 30px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer; }
+  .list li em:hover {
+    color: red; }
+
+.js {
+  width: 1000px;
+  height: 50px;
+  background-color: #ccc;
+  line-height: 50px; }
+  .js div {
+    display: inline-block; }
+  .js p {
+    display: inline; }
+  .js .js_l {
+    margin-left: 20px; }
+    .js .js_l p {
+      margin-left: 20px; }
+  .js .js_r {
+    float: right;
+    margin-left: 300px; }
+    .js .js_r p:nth-child(1) {
+      margin-right: 30px; }
+    .js .js_r i {
+      color: #e61414;
+      font-weight: bold; }
+    .js .js_r .goodsZj {
+      font-size: 20px; }
+    .js .js_r .js_but {
+      width: 120px;
+      height: 50px;
+      background-color: #b0b0b0;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      cursor: pointer; }

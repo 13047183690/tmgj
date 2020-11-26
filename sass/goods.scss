@@ -1,0 +1,138 @@
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .header{
+    position: relative;
+    background-color: #eee;
+    height: 80px;
+    text-align: center;
+    img{
+      float: left;
+      position: absolute;
+      height: 60px;
+      left: 10px;
+      top: 10px;
+    }
+    h1{
+      font-size: 40px;
+      display: inline;
+      color:#7a45e5;;
+    }
+  }
+  .title{
+    line-height: 40px;
+    background-color: #ccc;
+    overflow: hidden;
+    margin-top: 30px;
+    .a1{
+        margin-left: 100px;
+      }
+      .a2{
+        margin-left: 470px;
+      }
+      .a3{
+        margin-left: 100px;
+      }
+      .a4{
+        margin-left: 100px;
+      }
+      span{
+        font-size: 14px;
+        color: #333;
+      }
+  }
+  .list li{
+    margin: 10px 0;
+    overflow: hidden;
+    line-height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    img{
+        width: 100px;
+        height: 100px;
+        float: left;
+      }
+      h3{
+        float: left;
+        margin-left: 10px;
+        width: 340px;
+      }
+      p{
+        float: left;
+        margin-left: 120px;
+        width: 100px;
+        text-align: center;
+      }
+      span{
+        float: left;
+        margin-left: 30px;
+        width: 100px;
+        text-align: center;
+        i{
+            font-size: 20px;
+            display: inline-block;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            cursor: pointer;
+          }
+          strong{
+            margin: 0 10px;
+            
+          }
+      }
+      em{
+        float: left;
+        margin-left: 30px;
+        width: 100px;
+        text-align: center;
+        cursor: pointer;
+      }
+      em:hover{
+        color: red;
+      }
+  }
+  .js{
+    width: 1000px;
+    height: 50px;
+    background-color: #ccc;
+    line-height: 50px;
+    div{
+      display: inline-block;
+    }
+    p{
+      display: inline;
+    }
+    .js_l{
+      margin-left: 20px;
+       p{
+         margin-left: 20px;
+       } 
+    }
+    .js_r{
+      float: right;
+      margin-left: 300px;
+      p:nth-child(1){
+        margin-right: 30px;
+      }
+      i{
+        color: #e61414;
+        font-weight: bold;
+      }
+      .goodsZj{
+        font-size: 20px;
+      }
+      .js_but{
+        width: 120px;
+        height: 50px;
+        background-color: #b0b0b0;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    
+  }
