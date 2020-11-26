@@ -38,12 +38,20 @@ task('sass', async ()=>{
   .pipe(load.connect.reload())
 })
 
+// 编译json
+task('php',async()=>{
+  src('./php/*.json')
+  .pipe(dest('./dist/php'))
+  .pipe(load.connect.reload())
+})
+
 // 监听文件变化
 task('watch', async ()=>{
   watch('./pages/*.html',series('html'))
   watch('./sass/*.scss',series('sass'))
   watch('./img/*.*',series('img'))
   watch('./js/*.js',series('script'))
+  watch('./php/*json',series('php'))
 })
 
 // 自动刷新服务

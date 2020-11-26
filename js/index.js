@@ -47,9 +47,9 @@ $(function(){
         success:function(json){
             var colStr = "";
             //遍历得到的json数据遍历
-            $.each(json,function(index,item){
+            $.each(json[1],function(index,item){
                 colStr += `
-                    <li>
+                    <li code="${item.code}">
                         <img src="${item.imgurl}" alt="">
                         <div class="dis">
                             <span>
@@ -67,7 +67,7 @@ $(function(){
                                 <span>￥${item.op}</span><br>
                                 <i>已收3${item.soldout}件</i>
                             </div>
-                            <a href="./html/xq.html">马上抢</a>
+                            <a href="#">马上抢</a>
                         </div>
                     </li>
                 `
@@ -75,4 +75,19 @@ $(function(){
             $(".column ul").html(colStr);
         }
     });
+});
+//s添加点击事件传送商品编码到详情页
+$(".column ul").on("click","li",function(){
+    var code = $(this).attr("code");
+    //保存该数据
+    if(localStorage.getItem("xq")){
+        var xqArr = JSON.parse(localStorage.getItem("xq"));
+        xqArr.push(code);
+        localStorage.setItem("xq",JSON.stringify(xqArr));
+    }else{
+        var xqArr = [];
+        xqArr.push(code);
+        localStorage.setItem("xq",JSON.stringify(xqArr));
+    }
+    $(location).attr("href","xq.html");
 });
