@@ -87,3 +87,92 @@
 
 
 })();
+setTimeout(function(){
+    class Fdj{
+        constructor(obj){
+            this.$min_img = obj.$min_img;
+            this.$max_img = obj.$max_img;
+            this.$mask = obj.$mask;
+            this.$maxImg = obj.$maxImg;
+        }
+        init(){
+            this.minMove();
+            this.maskOut();
+        }
+        minMove(){
+            var _this = this;
+            // var l = 0 , t = 0 , maxL = 0 , maxT = 0;
+            this.$min_img.mousemove(function(e){
+                _this.$max_img.show();
+                
+                //console.log(e.pageX,e.pageY);
+                var l = e.pageX - $(this).offset().left - _this.$mask.width()/2;
+                var t = e.pageY - $(this).offset().top - _this.$mask.height()/2;
+                
+                var maxL = $(this).innerWidth() - _this.$mask.innerWidth();
+                var maxT = $(this).innerHeight() - _this.$mask.innerHeight();
+                
+                l = l < 0 ? 0 : (l > maxL ? maxL : l);
+                t = t < 0 ? 0 : (t > maxT ? maxT : t);
+                _this.$mask.show().css({"left":l, "top":t});
+                _this.$maxImg.css({"left": -(_this.$maxImg.innerWidth()/_this.$min_img.innerWidth())*l, "top" : -(_this.$maxImg.innerHeight()/_this.$min_img.innerHeight())*t});
+            });
+        }
+        maskOut(){
+            var _this = this;
+            this.$mask.mouseout(function(){
+                _this.$max_img.hide();
+                $(this).hide();
+            });
+        }
+    }    
+    var obj = {
+        $min_img : $(".min_img"),
+        $max_img : $(".max_img"),
+        $mask : $(".mask"),
+        $maxImg : $("#maxImg"),
+    }
+    new Fdj(obj).init();
+    
+    
+    
+    //获取倒计时div countDown 和所有的span
+    class cdDate{
+        constructor(obj){
+            this.$countDown = obj.$countDown;
+            this.init();
+        }
+        init(){
+            var _this = this;
+            //来个定时器500毫秒减一次
+            setInterval(function(){
+                _this.sss();
+            },100);
+            
+        }
+        sss(){
+            var nowDate = new Date;
+            var endDate = new Date("2020-12-01 00:00:00");
+            //获取两个时间的时间差z毫秒秒数
+            //转换成小时数
+            var hour = (endDate.getTime() - nowDate.getTime())/1000/60/60;
+           
+            // 获取天数取整
+            var d = parseInt(hour/24);
+            var h = parseInt((hour/24 - d)*24);
+            var f = parseInt(((hour/24 - d)*24 - h )*60);
+            var s = ((((hour/24 - d)*24 - h ) * 60 - f) * 60 ).toFixed(1);
+            if(hour < 0){
+                this.$countDown.html("<p style='color:red'>商品活动时间已结束！！！</p>");
+            }else{
+                this.$countDown.html("<p>还剩：<span>"+ d +"</span>天<span>"+ h +"</span>小时<span>"+ f +"</span>分<span>"+ s +"</span>秒</p>");
+            }
+        }
+    }
+    
+    var dateObj = {
+        $countDown : $(".countDown>p"),
+    }
+    
+    new cdDate(dateObj);
+},1000);

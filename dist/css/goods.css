@@ -15,7 +15,8 @@
     top: 10px; }
   .header h1 {
     font-size: 40px;
-    display: inline; }
+    display: inline;
+    color: #7a45e5; }
 
 .title {
   line-height: 40px;
